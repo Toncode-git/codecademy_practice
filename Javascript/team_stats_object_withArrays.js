@@ -1,8 +1,8 @@
 const team = {
   _players: [
-    {firstName: 'Pete', LastName: 'Wheeler', age: 44},
-    {firstName: 'David', LastName: 'Miller', age: 32},
-    {firstName: 'Mike', LastName: 'Webster', age: 45}
+    {firstName: 'Pete', lastName: 'Wheeler', age: 44},
+    {firstName: 'David', lastName: 'Miller', age: 32},
+    {firstName: 'Mike', lastName: 'Webster', age: 45}
     ],
   _games: [
     {opponent: 'Titans', teamPoints: 92, opponentPoints: 88},
@@ -18,7 +18,7 @@ const team = {
   addPlayer (newFirstName, newLastName, newAge) {
     const player = {
       firstName : newFirstName,
-      LastName: newLastName,
+      LastName: newlastName,
       age: newAge
     };
     this._players.push(player);
