@@ -5,7 +5,6 @@ const toSquare = num => num * num
 // Write your code here:
 const squareNums = arr => {
     return arr.map(number => {
-        
         return toSquare(number);
     })
 
