@@ -162,3 +162,80 @@ const doubled = numbers.map(num => num * 2);
 // [2, 4, 6]
 
 **Real use:** Converting prices from dollars to pesos, formatting user data for display
+
+# JavaScript Iterators - Quick Reference
+
+---
+
+## for...of Loop
+**Docs:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
+
+**Does:** Loops through the VALUES of an iterable (arrays, strings, etc.)
+**Use when:** You want the actual elements, not the indexes
+**Example:**
+```javascript
+const fruits = ['apple', 'banana', 'orange'];
+
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+// apple
+// banana  
+// orange
+
+// Also works with strings
+const name = 'Alejandro';
+for (const letter of name) {
+  console.log(letter); // A, l, e, j, a, n, d, r, o
+}
+```
+**Real use:** Processing each item in a list, iterating through characters in a string, handling API response arrays
+
+**Memory trick:** for...OF = **O**f the values themselves
+
+---
+
+## for...in Loop
+**Docs:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in
+
+**Does:** Loops through the KEYS/PROPERTY NAMES of an object (or indexes of an array)
+**Use when:** You need the property names, not the values directly
+**Example:**
+```javascript
+const user = {
+  name: 'Alejandro',
+  age: 24,
+  job: 'Customer Service Rep'
+};
+
+for (const key in user) {
+  console.log(key);           // name, age, job
+  console.log(user[key]);     // Alejandro, 24, Customer Service Rep
+}
+
+// With arrays (less common - usually use for...of instead)
+const colors = ['red', 'blue', 'green'];
+for (const index in colors) {
+  console.log(index);         // 0, 1, 2
+  console.log(colors[index]); // red, blue, green
+}
+```
+**Real use:** Iterating through object properties, accessing both keys and values, checking what properties an object has
+
+**Memory trick:** for...IN = **IN**dexes or property names
+
+---
+
+## Quick Comparison: for...of vs for...in
+
+| | for...of | for...in |
+|---|---|---|
+| **Gives you** | VALUES | KEYS/INDEXES |
+| **Best for** | Arrays, Strings | Objects |
+| **Example** | `for (const item of array)` | `for (const key in object)` |
+
+---
+
+## .forEach()
+**Docs:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+...
