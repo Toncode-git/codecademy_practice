@@ -25,5 +25,9 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 // Add your functions below:
 
 const validateCredit = arr => {
-    
-}
+    let reversed = mystery1.reverse().join(' ');
+    return reversed;
+};
+
+console.log(validateCredit(' \n' + mystery1));
+
