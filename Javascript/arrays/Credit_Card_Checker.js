@@ -30,5 +30,6 @@ const validateCredit = arr => {
 console.log('\n');
 console.log(validateCredit(mystery1));
 console.log('\n');
-
+ 
+console.log(mystery1);
 
